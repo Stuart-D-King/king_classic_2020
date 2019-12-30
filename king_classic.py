@@ -12,7 +12,7 @@ import folium
 def past_locations_map():
     m = folium.Map(location=[40, -98], zoom_start=5)
 
-    folium.Marker([33.494171, -111.926048], popup='2018 - Scottsdale, AZ - Alex King\n2019 - Scottsdale, AZ - Alex King').add_to(m)
+    folium.Marker([33.494171, -111.926048], popup='2018 - Scottsdale, AZ - Alex King 2019 - Scottsdale, AZ - Alex King').add_to(m)
     folium.Marker([36.805531, -114.06719], popup='2017 - Mesquite, NV - Alex King').add_to(m)
     folium.Marker([41.878114, -87.629798], popup='2016 - Chicago, IL - Jerry King').add_to(m)
     folium.Marker([34.502587, -84.951054], popup='2015 - Georgia - Stuart King').add_to(m)
