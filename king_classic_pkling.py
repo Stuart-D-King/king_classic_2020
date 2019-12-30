@@ -628,9 +628,9 @@ if __name__ == '__main__':
 
     print('Adding players...')
     golf.add_player('Stuart King', 3, True)
-    golf.add_player('Alex King', 2, True)
-    golf.add_player('Jerry King', 7, True)
-    golf.add_player('Reggie Sherrill', 7, True)
+    # golf.add_player('Alex King', 2, True)
+    # golf.add_player('Jerry King', 7, True)
+    # golf.add_player('Reggie Sherrill', 7, True)
 
     print("Adding Stuart's scores...")
     for idx, _ in enumerate(range(18)):
@@ -638,23 +638,23 @@ if __name__ == '__main__':
     for idx, _ in enumerate(range(18)):
         golf.add_score('Stuart King', 'Lake Jovita - South', idx+1, np.random.randint(3,7))
 
-    print("Adding Alex's scores...")
-    for idx, _ in enumerate(range(18)):
-        golf.add_score('Alex King', 'Lake Jovita - North', idx+1, np.random.randint(3,6))
-    for idx, _ in enumerate(range(18)):
-        golf.add_score('Alex King', 'Lake Jovita - South', idx+1, np.random.randint(3,6))
-
-    print("Adding Jerry's scores...")
-    for idx, _ in enumerate(range(18)):
-        golf.add_score('Jerry King', 'Lake Jovita - North', idx+1, np.random.randint(3,7))
-    for idx, _ in enumerate(range(18)):
-        golf.add_score('Jerry King', 'Lake Jovita - South', idx+1, np.random.randint(3,7))
-
-    print("Adding Reggie's scores...")
-    for idx, _ in enumerate(range(18)):
-        golf.add_score('Reggie Sherrill', 'Lake Jovita - North', idx+1, np.random.randint(3,7))
-    for idx, _ in enumerate(range(18)):
-        golf.add_score('Reggie Sherrill', 'Lake Jovita - South', idx+1, np.random.randint(3,7))
+    # print("Adding Alex's scores...")
+    # for idx, _ in enumerate(range(18)):
+    #     golf.add_score('Alex King', 'Lake Jovita - North', idx+1, np.random.randint(3,6))
+    # for idx, _ in enumerate(range(18)):
+    #     golf.add_score('Alex King', 'Lake Jovita - South', idx+1, np.random.randint(3,6))
+    #
+    # print("Adding Jerry's scores...")
+    # for idx, _ in enumerate(range(18)):
+    #     golf.add_score('Jerry King', 'Lake Jovita - North', idx+1, np.random.randint(3,7))
+    # for idx, _ in enumerate(range(18)):
+    #     golf.add_score('Jerry King', 'Lake Jovita - South', idx+1, np.random.randint(3,7))
+    #
+    # print("Adding Reggie's scores...")
+    # for idx, _ in enumerate(range(18)):
+    #     golf.add_score('Reggie Sherrill', 'Lake Jovita - North', idx+1, np.random.randint(3,7))
+    # for idx, _ in enumerate(range(18)):
+    #     golf.add_score('Reggie Sherrill', 'Lake Jovita - South', idx+1, np.random.randint(3,7))
 
 
     # hdcp = golf.calc_handicap('Alex', 'World Woods - Rolling Oaks')
