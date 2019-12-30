@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>King Classic: Enter Scores</title>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+	<body>
+    <h2>Enter Scores</h2>
+    <form action='/enter_scores' method='POST' id='submitform'>
+      Course:<br>
+      <select title="course" name="course" required>
+	      <option value="None" {% if on_course=='None' %} selected {% endif %} >-- select course --</option>
+	      <option value="Lake Jovita - North" name="Lake Jovita - North" id="Lake Jovita - North" {% if on_course=="Lake Jovita - North" %} selected {% endif %} >Lake Jovita - North</option>
+	      <option value="Lake Jovita - South" name="Lake Jovita - South" id="Lake Jovita - South" {% if on_course=='Lake Jovita - South' %} selected {% endif %}>Lake Jovita - South</option>
+				<option value="World Woods - Rolling Oaks" name="World Woods - Rolling Oaks" id="World Woods - Rolling Oaks" {% if on_course=='World Woods - Rolling Oaks' %} selected {% endif %}>World Woods - Rolling Oaks</option>
+				<option value="World Woods - Pine Barrens" name="World Woods - Pine Barrens" id="World Woods - Pine Barrens" {% if on_course=='World Woods - Pine Barrens' %} selected {% endif %}>World Woods - Pine Barrens</option>
+				<option value="Southern Hills Plantation - Morning" name="Southern Hills Plantation - Morning" id="Southern Hills Plantation - Morning" {% if on_course=='Southern Hills Plantation - Morning' %} selected {% endif %}>Southern Hills Plantation - Morning</option>
+				<option value="Southern Hills Plantation - Afternoon" name="Southern Hills Plantation - Afternoon" id="Southern Hills Plantation - Afternoon" {% if on_course=='Southern Hills Plantation - Afternoon' %} selected {% endif %}>Southern Hills Plantation - Afternoon</option>
+				<!-- <option selected value="None" readonly="readonly">-- select course --</option>
+				<option value='Grayhawk - Raptor'>Grayhawk - Raptor</option>
+        <option value='Troon North - Pinnacle'>Troon North - Pinnacle</option>
+        <option value='We Ko Pa - Cholla'>We Ko Pa - Cholla</option>
+        <option value='We Ko Pa - Saguaro'>We Ko Pa - Saguaro</option>
+        <option value='Gold Canyon - Dinosaur'>Gold Canyon - Dinosaur</option>
+        <option value='Gold Canyon - Sidewinder'>Gold Canyon - Sidewinder</option> -->
+      </select><br><br>
+
+      Hole:<br>
+      <select name="hole" name="hole" method="GET" action="/">
+				<option value="0" {% if next_hole==0 %} selected {% endif %}>-- select hole --</option>
+				{% for hole in holes %}
+	      <option value="{{hole}}" {% if next_hole==hole %} selected {% endif %}>{{hole}}</option>"
+	      {% endfor %}
+      </select>
+
+			<br><br>
+
+			<table>
+        <tr>
+					<td colspan='2'><b>Player 1</b></td>
+        </tr>
+				<tr>
+	        <td>Name:</td>
+	        <td>
+						<select name="player1" method="GET" action="/">
+							<option value="None" {% if p1=='None' %} selected {% endif %}>-- select player --</option>
+							{% for player in players %}
+			        <option value="{{player}}" {% if p1==player %} selected {% endif %}>{{player}}</option>"
+			        {% endfor %}
+			      </select>
+	          <!-- <input type="text" value="@Model.Mem_ResAdd1" name="Mem_ResAdd1" /> -->
+	        </td>
+				</tr>
+				<tr>
+	        <td>Score:</td>
+	        <td>
+						<select name="score1" method="GET" action="/">
+							<option selected value="None">-- select score --</option>
+							{% for score in scores %}
+			        <option value="{{score}}">{{score}}</option>"
+			        {% endfor %}
+			      </select>
+	          <!-- <input type="text" value="@Model.Mem_ResAdd1" name="Mem_ResAdd1" /> -->
+	        </td>
+        </tr>
+			</table>
+
+			<br>
+
+			<table>
+        <tr>
+					<td colspan='2'> <b>Player 2</b></td>
+        </tr>
+				<tr>
+	        <td>Name:</td>
+	        <td>
+						<select name="player2" method="GET" action="/">
+							<option value="None" {% if p2=='None' %} selected {% endif %}>-- select player --</option>
+							{% for player in players %}
+			        <option value="{{player}}" {% if p2==player %} selected {% endif %}>{{player}}</option>"
+			        {% endfor %}
+			      </select>
+	          <!-- <input type="text" value="@Model.Mem_ResAdd1" name="Mem_ResAdd1" /> -->
+	        </td>
+				</tr>
+				<tr>
+	        <td>Score:</td>
+	        <td>
+						<select name="score2" method="GET" action="/">
+							<option selected value="None">-- select score --</option>
+							{% for score in scores %}
+			        <option value="{{score}}">{{score}}</option>"
+			        {% endfor %}
+			      </select>
+	          <!-- <input type="text" value="@Model.Mem_ResAdd1" name="Mem_ResAdd1" /> -->
+	        </td>
+        </tr>
+			</table>
+
+			<br>
+
+			<table>
+				<tr>
+					<td colspan='2'><b>Player 3</b></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td>
+						<select name="player3" method="GET" action="/">
+							<option value="None" {% if p3=='None' %} selected {% endif %}>-- select player --</option>
+							{% for player in players %}
+							<option value="{{player}}" {% if p3==player %} selected {% endif %}>{{player}}</option>"
+							{% endfor %}
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Score:</td>
+					<td>
+						<select name="score3" method="GET" action="/">
+							<option selected value="None">-- select score --</option>
+							{% for score in scores %}
+							<option value="{{score}}">{{score}}</option>"
+							{% endfor %}
+						</select>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table>
+				<tr>
+					<td colspan='2'> <b>Player 4</b></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td>
+						<select name="player4" method="GET" action="/">
+							<option value="None" {% if p4=='None' %} selected {% endif %}>-- select player --</option>
+							{% for player in players %}
+							<option value="{{player}}" {% if p4==player %} selected {% endif %}>{{player}}</option>"
+							{% endfor %}
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Score:</td>
+					<td>
+						<select name="score4" method="GET" action="/">
+							<option selected value="None">-- select score --</option>
+							{% for score in scores %}
+							<option value="{{score}}">{{score}}</option>"
+							{% endfor %}
+						</select>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+      <input type='submit' value="Submit"/>
+    </form>
+		<h4>{{msg|safe}}</h4>
+		<h4>{{course|safe}}</h4>
+		<p>{{scorecard_df|safe}}</p>
+    <h4><a href="{{ url_for('index') }}">Home</a></h4>
+  </body>
+</html>

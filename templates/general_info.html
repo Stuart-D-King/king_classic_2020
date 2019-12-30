@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>King Classic: Info</title>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+
+  <body>
+    <h2>General Information</h2>
+    <p><a href="#payment">Payment</a></p>
+    <p><a href="#lodging">Lodging</a></p>
+		<p><a href="#food">Food</a></p>
+    <p><a href="#rules">Rules & Format</a></p>
+    <p><a href="#golf">Courses, Pairings, & Tee Times</a></p>
+    <p><a href="#sidegames">Side Games</a></p>
+    <p><a href="#teams">Teams</a></p>
+		<p><a href="{{ url_for('index') }}">Home</a></p>
+    <br>
+    <section id="payment">
+      <h4>Payment</h4>
+			<div class="boxed">
+				<p>The hotel will be paid for upon arrival, and all greens fees will be paid directly at the golf courses.</p>
+			</div>
+    </section>
+		<br>
+		<a href="#">Back to top</a>
+    <br>
+		<br>
+    <section id="lodging">
+      <h4>Lodging</h4>
+			<div class="boxed">
+				<p>We are staying at the <a href="https://www.wyndhamhotels.com/microtel/brooksville-florida/microtel-inn-and-suites-brooksville/overview" target="_blank">Microtel Inn & Suites</a> in Brooksville, Florida, which is about an hour from the Tampa airport and an hour and 20 minutes from the Orlando airport. We will have six 2-man rooms - room assignments are as follows:</p>
+			</div>
+			<br>
+			<div>
+				<table>
+					<tr>
+						<th>Room 1</th>
+						<th>Room 2</th>
+						<th>Room 3</th>
+						<th>Room 4</th>
+						<th>Room 5</th>
+						<th>Room 6</th>
+					</tr>
+					<tr>
+						<td>Stuart King</td>
+						<td>Patrick Hannahan</td>
+						<td>Zach Taylor</td>
+						<td>Andy Tapper</td>
+						<td>Jeff Veness</td>
+						<td>Alex King</td>
+					</tr>
+					<tr>
+						<td>Cooper Stainbrook</td>
+						<td>Justin Casson</td>
+						<td>Chris Marsh</td>
+						<td>Bobby Jovanov</td>
+						<td>Reggie Sherrill</td>
+						<td>Jerry King</td>
+					</tr>
+				</table>
+			</div>
+    </section>
+		<br>
+		<a href="#">Back to top</a>
+    <br>
+		<br>
+		<section id="food">
+			<h4>Food</h4>
+			<div class="boxed">
+				<p>A breakfast buffet is included with our lodging. We'll get lunch at the course as a group after each morning round.</p>
+				<p>For dinners, we're planning on the following restaurants.</p>
+				<p><a href="http://www.als.pizza/" target="_blank">Al's Famous Pizza</a> (Sunday, FCFS)</p>
+	      <p><a href="http://www.alejandrosmexicanrestaurant.com/" target="_blank">Alejandro's Mexican Restaurant</a> (Monday, FCFS)</p>
+				<p>Tuesday dinner TBD</p>
+			</div>
+		</section>
+		<br>
+		<a href="#">Back to top</a>
+    <br>
+		<br>
+    <section id="rules">
+      <h4>Rules & Format</h4>
+			<div class="boxed">
+	      <p>The highest score you can card is +5 on a hole. Putt everything out. If you hit a ball into the woods or high grass but think you can find it, look for it and if you don't find it, just take a lateral drop with a one-stroke penalty. However, if you blow one OB, you'll need to re-hit and take a penalty from the tee. You are permitted to bump the ball from a divot in the fairway, but play everything else down.</p>
+	      <p>You must play all six rounds to be eligible to win the King Classic and have your name on the trophy. The winner will have the lowest <b>net score</b> over six rounds.</p>
+				<p>Initial handicaps must be verified, but do not need to be official. There are several free apps that will calculate a handicap for you. <a href="https://www.thegrint.com/" target="_blank">The Grint</a> and <a href="https://www.swingbyswing.com/" target="_blank">Swing by Swing</a> are a few good ones. Please submit a screenshot of your handicap by August 1st.</p>
+				<p>During the trip, if you better your handicap by four or more on any two consecutive rounds, your handicap will be adjusted down by two. For example, if your handicap is 12 and you shoot 80 or better two times in a row, your handicap will be adjusted to 10. Similarly, if you miss your handicap by eight or more on two consecutive rounds, your handicap will be adjusted up by two. For example, if your handicap is 12 and you shoot 92 or worse two times in a row, your handicap will be adjusted to 14. You can check what your handicap will be before each round <b><a href="{{ url_for('handicaps') }}">here</a></b>.</p>
+			</div>
+    </section>
+		<br>
+		<a href="#">Back to top</a>
+		<br>
+		<br>
+    <section id="golf">
+      <p><b>Courses, Pairings, & Tee Times</b></p>
+			<p><a href="#d1r1">Sunday, Round 1</a></p>
+			<p><a href="#d1r2">Sunday, Round 2</a></p>
+			<p><a href="#d2r1">Monday, Round 1</a></p>
+			<p><a href="#d2r2">Monday, Round 2</a></p>
+			<p><a href="#d3r1">Tuesday, Round 1</a></p>
+			<p><a href="#d3r2">Tuesday, Round 2</a></p>
+			<br>
+			<section id="d1r1">
+	      <p><b>Lake Jovita - North Course</b></p>
+	      <p>Sunday, February 16</p>
+				<p>Over 50: White Tees</p>
+				<p>Under 50, 10+ Hdcp: White Tees</p>
+				<p>Under 50, &lt;10 Hdcp: Blue Tees</p>
+	      <p>Closest to the Pin: Hole #13</p>
+			</section>
+			<div>
+				<table>
+					<tr>
+						<th>Group 1</th>
+						<th>Group 2</td>
+						<th>Group 3</td>
+					</tr>
+					<tr>
+						<td>Tee time: 7:27 AM</td>
+						<td>Tee time: 7:36 AM</td>
+						<td>Tee time: 7:45 AM</td>
+					</tr>
+					<tr>
+						<td>Alex King</td>
+						<td>Jeff Veness</td>
+						<td>Andy Tapper</td>
+					</tr>
+					<tr>
+						<td>Stuart King</td>
+						<td>Patrick Hannahan</td>
+						<td>Zach Taylor</td>
+					</tr>
+					<tr>
+						<td>Jerry King</td>
+						<td>Justin Casson</td>
+						<td>Bobby Jovanov</td>
+					</tr>
+					<tr>
+						<td>Reggie Sherrill</td>
+						<td>Cooper Stainbrook</td>
+						<td>Chris Marsh</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<a href="#golf">Back</a>
+			<br>
+			<br>
+			<section id="d1r2">
+				<p><b>Lake Jovita - South Course</b></p>
+	      <p>Sunday, February 16</p>
+				<p>Over 50: White Tees</p>
+				<p>Under 50, 10+ Hdcp: White Tees</p>
+	      <p>Under 50, &lt;10 Hdcp: Blue Tees</p>
+	      <p>Closest to the Pin: Hole #7</p>
+			</section>
+			<div>
+				<table>
+					<tr>
+						<th>Group 1</th>
+						<th>Group 2</td>
+						<th>Group 3</td>
+					</tr>
+					<tr>
+						<td>Tee time: 1:09 PM</td>
+						<td>Tee time: 1:18 PM</td>
+						<td>Tee time: 1:27 PM</td>
+					</tr>
+					<tr>
+						<td>Alex King</td>
+						<td>Justin Casson</td>
+						<td>Jerry King</td>
+					</tr>
+					<tr>
+						<td>Zach Taylor</td>
+						<td>Patrick Hannahan</td>
+						<td>Jeff Veness</td>
+					</tr>
+					<tr>
+						<td>Bobby Jovanov</td>
+						<td>Stuart King</td>
+						<td>Reggie Sherrill</td>
+					</tr>
+					<tr>
+						<td>Andy Tapper</td>
+						<td>Cooper Stainbrook</td>
+						<td>Chris Marsh</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<a href="#golf">Back</a>
+			<br>
+			<br>
+			<section id="d2r1">
+				<p><b>World Woods - Rolling Oaks</b></p>
+	      <p>Monday, February 17</p>
+				<p>Over 50: White Tees</p>
+				<p>Under 50, 10+ Hdcp: Green Tees</p>
+	      <p>Under 50, &lt;10 Hdcp: Black Tees</p>
+	      <p>Closest to the Pin: Hole #8</p>
+			</section>
+			<div>
+				<table>
+					<tr>
+						<th>Group 1</th>
+						<th>Group 2</td>
+						<th>Group 3</td>
+					</tr>
+					<tr>
+						<td>Tee time: 7:43 AM</td>
+						<td>Tee time: 7:52 AM</td>
+						<td>Tee time: 8:01 AM</td>
+					</tr>
+					<tr>
+						<td>Alex King</td>
+						<td>Patrick Hannahan</td>
+						<td>Andy Tapper</td>
+					</tr>
+					<tr>
+						<td>Stuart King</td>
+						<td>Zach Taylor</td>
+						<td>Bobby Jovanov</td>
+					</tr>
+					<tr>
+						<td>Jerry King</td>
+						<td>Reggie Sherrill</td>
+						<td>Justin Casson</td>
+					</tr>
+					<tr>
+						<td>Jeff Veness</td>
+						<td>Cooper Stainbrook</td>
+						<td>Chris Marsh</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<a href="#golf">Back</a>
+			<br>
+			<br>
+			<section id="d2r2">
+				<p><b>World Woods - Pine Barrens</b></p>
+	      <p>Monday, February 17</p>
+				<p>Over 50: White Tees</p>
+				<p>Under 50, 10+ Hdcp: Green Tees</p>
+	      <p>Under 50, &lt;10 Hdcp: Black Tees</p>
+	      <p>Closest to the Pin: Hole #10</p>
+			</section>
+			<div>
+				<table>
+					<tr>
+						<th>Group 1</th>
+						<th>Group 2</td>
+						<th>Group 3</td>
+					</tr>
+					<tr>
+						<td>Tee time: 1:05 PM</td>
+						<td>Tee time: 1:14 PM</td>
+						<td>Tee time: 1:23 PM</td>
+					</tr>
+					<tr>
+						<td>Stuart King</td>
+						<td>Andy Tapper</td>
+						<td>Bobby Jovanov</td>
+					</tr>
+					<tr>
+						<td>Patrick Hannahan</td>
+						<td>Alex King</td>
+						<td>Jerry King</td>
+					</tr>
+					<tr>
+						<td>Zach Taylor</td>
+						<td>Jeff Veness</td>
+						<td>Reggie Sherrill</td>
+					</tr>
+					<tr>
+						<td>Justin Casson</td>
+						<td>Cooper Stainbrook</td>
+						<td>Chris Marsh</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<a href="#golf">Back</a>
+			<br>
+			<br>
+			<section id="d3r1">
+	      <p><b>Southern Hills Plantation</b></p>
+	      <p>Tuesday, February 18</p>
+				<p>Over 50: Magnolia Tees</p>
+				<p>Under 50: Pine Tees</p>
+	      <p>Closest to the Pin: Hole #17</p>
+			</section>
+			<div>
+				<table>
+					<tr>
+						<th>Group 1</th>
+						<th>Group 2</td>
+						<th>Group 3</td>
+					</tr>
+					<tr>
+						<td>Tee time: 7:30 AM</td>
+						<td>Tee time: 7:40 AM</td>
+						<td>Tee time: 7:50 AM</td>
+					</tr>
+					<tr>
+						<td>Andy Tapper</td>
+						<td>Alex King</td>
+						<td>Reggie Sherrill</td>
+					</tr>
+					<tr>
+						<td>Stuart King</td>
+						<td>Jerry King</td>
+						<td>Jeff Veness</td>
+					</tr>
+					<tr>
+						<td>Bobby Jovanov</td>
+						<td>Patrick Hannahan</td>
+						<td>Zach Taylor</td>
+					</tr>
+					<tr>
+						<td>Justin Casson</td>
+						<td>Cooper Stainbrook</td>
+						<td>Chris Marsh</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<a href="#golf">Back</a>
+			<br>
+			<br>
+			<section id="d3r2">
+	      <p><b>Southern Hills Plantation - Replay</b></p>
+	      <p>Tuesday, February 18</p>
+				<p>Over 50: Magnolia Tees</p>
+				<p>Under 50: Pine Tees</p>
+	      <p>Closest to the Pin: Hole #8</p>
+			</section>
+			<div>
+				<table>
+					<tr>
+						<th>Group 1</th>
+						<th>Group 2</td>
+						<th>Group 3</td>
+					</tr>
+					<tr>
+						<td>Tee time: 12:50 PM</td>
+						<td>Tee time: 1:00 PM</td>
+						<td>Tee time: 1:10 PM</td>
+					</tr>
+					<tr>
+						<td>Stuart King</td>
+						<td>Alex King</td>
+						<td>Andy Tapper</td>
+					</tr>
+					<tr>
+						<td>Patrick Hannahan</td>
+						<td>Reggie Sherrill</td>
+						<td>Zach Taylor</td>
+					</tr>
+					<tr>
+						<td>Jerry King</td>
+						<td>Justin Casson</td>
+						<td>Bobby Jovanov</td>
+					</tr>
+					<tr>
+						<td>Jeff Veness</td>
+						<td>Cooper Stainbrook</td>
+						<td>Chris Marsh</td>
+					</tr>
+				</table>
+			</div>
+    </section>
+		<br>
+		<a href="#">Back to top</a>
+		<br>
+		<br>
+    <section id="sidegames">
+      <h4>Side Games</h4>
+			<div class="boxed">
+	      <p><b>Skins</b> and <b>closest to the pin</b> are mandatory. Skins are based on net low score, and are $5 per round and then split among the participants based on the number of skins won. Please note that if your handicap is greater than 18, for the skins game (and only for the skins game) your handicap will be adjusted to 18. Closest to the pin is $2.50 per round, and the hole has been pre-selected and identified above.</p>
+	      <p>Alex is the bank, so settle up with him. The total for 6 rounds is $45 ($5 x 6 = $30; $2.50 x 6 = $15; $30 + $15 = $45). If you don't already have it, download and install <a href="https://venmo.com/" target="_blank">Venmo</a> on your phone to make money exchange quick and easy. If you don't use Venmo, please bring cash and pay Alex before play begins. He will settle up with you in the same manner that you use to buy in (i.e. Venmo or cash).</p>
+			</div>
+    </section>
+		<br>
+		<a href="#">Back to top</a>
+		<br>
+		<br>
+    <section id="teams">
+      <h4>Teams</h4>
+			<div class="boxed">
+	      <p>Each round an individual player will put in $10 ($60 total for the trip). At the <b>end</b> of each round, all 10 players will draw a number from a hat to see who their partner was for the round. The top three two-man teams with the lowest <b>net</b> combined score will win the cash prizes accordingly:</p>
+	      <p>First place: $60</p>
+	      <p>Second place: $40</p>
+	      <p>Third place: $20</p>
+				<p>Ties will result in the splitting of the relevant prizes. For example, a two-way tie for first will see those two teams each winning $50 ($60 + $40 = $80 / 2 = $50), with the third place team winning $20.</p>
+			</div>
+    </section>
+		<br>
+		<a href="#">Back to top</a>
+		<br>
+		<h4><a href="{{ url_for('index') }}">Home</a></h4>
+  </body>
+</html>

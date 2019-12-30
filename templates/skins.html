@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>King Classic: Skins</title>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+	<body>
+    <h2>Skins</h2>
+    <form action='/skins' method='POST' id='submitform'>
+      Course:<br>
+      <select name="skins_course">
+				<option selected value="None" readonly="readonly">-- select course --</option>
+				<option value='Lake Jovita - North'>Lake Jovita - North</option>
+        <option value='Lake Jovita - South'>Lake Jovita - South</option>
+        <option value='World Woods - Rolling Oaks'>World Woods - Rolling Oaks</option>
+        <option value='World Woods - Pine Barrens'>World Woods - Pine Barrens</option>
+        <option value='Southern Hills Plantation - Morning'>Southern Hills Plantation - Morning</option>
+        <option value='Southern Hills Plantation - Afternoon'>Southern Hills Plantation - Afternoon</option>
+      </select>
+      <br><br>
+      <input type='submit' value="Submit"/>
+    </form>
+		<!-- <h4>{{course|safe}}</h4>
+    <p>{{skins_df|safe}}</p>
+		<p>{{scorecard_df|safe}}</p> -->
+		<h4>{{msg|safe}}</h4>
+    <h4><a href="{{ url_for('index') }}">Home</a></h4>
+  </body>
+</html>

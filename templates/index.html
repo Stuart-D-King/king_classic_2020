@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>King Classic</title>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+	<body>
+    <h2>King Classic 2020</h2>
+    <h5>Brooksville, Florida &#9679; February 16-18</h5>
+		<h4><a href="{{ url_for('general_info') }}">General Information</a></h4>
+    <h4><a href="{{ url_for('add_player') }}">Add Player</a></h4>
+    <h4><a href="{{ url_for('enter_scores') }}">Enter Scores</a></h4>
+    <h4><a href="{{ url_for('leaderboard') }}">Leaderboard</a></h4>
+		<h4><a href="{{ url_for('skins') }}">Skins</a></h4>
+		<h4><a href="{{ url_for('teams') }}">Teams</a></h4>
+		<h4><a href="{{ url_for('handicaps') }}">Handicaps</a></h4>
+    <h4><a href="{{ url_for('scorecard') }}">Scorecard</a></h4>
+		<h4><a href="https://photos.app.goo.gl/iuHKU3hZft2coaSN8" target="_blank">Photo Album</a></h4>
+    <h4><a href="{{ url_for('past_results') }}">Past Results</a></h4>
+    <h6>&copy; 2020 Stuart King &#9679; <a href="https://github.com/stuart-d-king/king_classic_2020/" target="_blank">GitHub Repo</a></h6>
+  </body>
+</html>

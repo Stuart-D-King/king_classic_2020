@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>King Classic: Scorecard</title>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+		<script language="JavaScript">
+		function toggle(source) {
+		  checkboxes = document.getElementsByName('golfers');
+		  for(var i=0, n=checkboxes.length;i<n;i++) {
+		    checkboxes[i].checked = source.checked;
+		  }
+		}
+		</script>
+	</head>
+	<body>
+    <h2>Scorecard</h2>
+    <form action='/scorecard' method='POST' id='submitform'>
+      Course:<br>
+			<select name="scorecard_course">
+				<option selected value="None" readonly="readonly">-- select course --</option>
+				<option value='Lake Jovita - North'>Lake Jovita - North</option>
+        <option value='Lake Jovita - South'>Lake Jovita - South</option>
+        <option value='World Woods - Rolling Oaks'>World Woods - Rolling Oaks</option>
+        <option value='World Woods - Pine Barrens'>World Woods - Pine Barrens</option>
+        <option value='Southern Hills Plantation - Morning'>Southern Hills Plantation - Morning</option>
+        <option value='Southern Hills Plantation - Afternoon'>Southern Hills Plantation - Afternoon</option>
+      </select><br><br>
+
+			Net?<br>
+			<select name="net">
+				<option selected value="No">No</option>
+				<option value="Yes">Yes</option>
+			</select><br><br>
+
+      Select Player(s):<br>
+			<!-- <fieldset>
+				{% for player in players %}
+				<input type="checkbox" name="golfers" value="{{player}}" SELECTED>{{player}}</input><br>
+				{% endfor %}
+				<input type="checkbox" id="selectall" onClick="toggle(this)" value="all">
+				<label for="selectall">Select All</label>
+			</fieldset> -->
+
+			<fieldset>
+				<ul>
+					{% for player in players %}
+					<li>
+						<input type="checkbox" name="golfers" value="{{player}}" id="{{player}}" class="paddingClass">
+						<label for="{{player}}">{{player|safe}}</label>
+						<br>
+					</li>
+					{% endfor %}
+
+					<li>
+						<input type="checkbox" id="selectall" onClick="toggle(this)" value="all" class="paddingClass">
+						<label for="selectall">Select All</label>
+						<br>
+					</li>
+				</ul>
+			</fieldset>
+			<br>
+      <input type='submit' value="Submit"/>
+    </form>
+		<h4>{{msg|safe}}</h4>
+		<!-- <h4>{{course|safe}}</h4>
+    <p>{{scorecard_df|safe}}</p> -->
+    <h4><a href="{{ url_for('index') }}">Home</a></h4>
+  </body>
+</html>

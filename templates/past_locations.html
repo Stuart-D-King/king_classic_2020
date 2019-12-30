@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/leaflet.markercluster-src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_8533b691d1ff48e887e54967df2b1f9f {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_8533b691d1ff48e887e54967df2b1f9f" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var southWest = L.latLng(-90, -180);
+                var northEast = L.latLng(90, 180);
+                var bounds = L.latLngBounds(southWest, northEast);
+            
+
+            var map_8533b691d1ff48e887e54967df2b1f9f = L.map(
+                                  'map_8533b691d1ff48e887e54967df2b1f9f',
+                                  {center: [40,-98],
+                                  zoom: 5,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_20f631c50a9e424e892231f3a3fb574b = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    continuousWorld: false,
+                    noWrap: false,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+
+        
+    
+
+            var marker_9696ed8b21ad41fea5581c4649aa0e03 = L.marker(
+                [33.494171,-111.926048],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_f9814979b073469e88da3c194ef84672 = L.popup({maxWidth: '300'});
+
+            
+                var html_f459c9ec9fbc4f36be85d8dc176ba3af = $('<div id="html_f459c9ec9fbc4f36be85d8dc176ba3af" style="width: 100.0%; height: 100.0%;">2018 - Scottsdale, AZ - Alex King</div>')[0];
+                popup_f9814979b073469e88da3c194ef84672.setContent(html_f459c9ec9fbc4f36be85d8dc176ba3af);
+            
+
+            marker_9696ed8b21ad41fea5581c4649aa0e03.bindPopup(popup_f9814979b073469e88da3c194ef84672);
+
+            
+        
+    
+
+            var marker_e2af817ccee4408dbbd34aa8a9dd5794 = L.marker(
+                [36.805531,-114.06719],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_8155ea5d9a684f1e84bf3e1b387b0836 = L.popup({maxWidth: '300'});
+
+            
+                var html_5427903ce2544dddb4bf0fe69713613b = $('<div id="html_5427903ce2544dddb4bf0fe69713613b" style="width: 100.0%; height: 100.0%;">2017 - Mesquite, NV - Alex King</div>')[0];
+                popup_8155ea5d9a684f1e84bf3e1b387b0836.setContent(html_5427903ce2544dddb4bf0fe69713613b);
+            
+
+            marker_e2af817ccee4408dbbd34aa8a9dd5794.bindPopup(popup_8155ea5d9a684f1e84bf3e1b387b0836);
+
+            
+        
+    
+
+            var marker_79cf5e88b8bd44c5b66d89ab8486dbe5 = L.marker(
+                [41.878114,-87.629798],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_b20f7f642a1d495fbec7a1ab5288aadf = L.popup({maxWidth: '300'});
+
+            
+                var html_4382b97389314fdf8d7da4f95707373d = $('<div id="html_4382b97389314fdf8d7da4f95707373d" style="width: 100.0%; height: 100.0%;">2016 - Chicago, IL - Jerry King</div>')[0];
+                popup_b20f7f642a1d495fbec7a1ab5288aadf.setContent(html_4382b97389314fdf8d7da4f95707373d);
+            
+
+            marker_79cf5e88b8bd44c5b66d89ab8486dbe5.bindPopup(popup_b20f7f642a1d495fbec7a1ab5288aadf);
+
+            
+        
+    
+
+            var marker_a4fe2612d6f94add8d30444915b7c15e = L.marker(
+                [34.502587,-84.951054],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_cf2177f5e9b244d1939acde9c1984c8e = L.popup({maxWidth: '300'});
+
+            
+                var html_65584de287a04edcb2740bd36dfbc9c0 = $('<div id="html_65584de287a04edcb2740bd36dfbc9c0" style="width: 100.0%; height: 100.0%;">2015 - Georgia - Stuart King</div>')[0];
+                popup_cf2177f5e9b244d1939acde9c1984c8e.setContent(html_65584de287a04edcb2740bd36dfbc9c0);
+            
+
+            marker_a4fe2612d6f94add8d30444915b7c15e.bindPopup(popup_cf2177f5e9b244d1939acde9c1984c8e);
+
+            
+        
+    
+
+            var marker_f63c8e864c18405983eac602d6fb6354 = L.marker(
+                [42.331427,-83.045754],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_fac508be76e44b9788e1c1ee2f242c38 = L.popup({maxWidth: '300'});
+
+            
+                var html_36cb8abc30a6465b9a50111595f9e1aa = $('<div id="html_36cb8abc30a6465b9a50111595f9e1aa" style="width: 100.0%; height: 100.0%;">2014 - Michigan - Reggie Sherrill</div>')[0];
+                popup_fac508be76e44b9788e1c1ee2f242c38.setContent(html_36cb8abc30a6465b9a50111595f9e1aa);
+            
+
+            marker_f63c8e864c18405983eac602d6fb6354.bindPopup(popup_fac508be76e44b9788e1c1ee2f242c38);
+
+            
+        
+    
+
+            var marker_787cbb6332ac4aef9e8ef69b8382f25a = L.marker(
+                [39.739236,-104.990251],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_bf747952ef994847b716913bd6334fb5 = L.popup({maxWidth: '300'});
+
+            
+                var html_4c96e7be332e41f18036ad5865bd3dd9 = $('<div id="html_4c96e7be332e41f18036ad5865bd3dd9" style="width: 100.0%; height: 100.0%;">2013 - Denver, CO - Stuart King</div>')[0];
+                popup_bf747952ef994847b716913bd6334fb5.setContent(html_4c96e7be332e41f18036ad5865bd3dd9);
+            
+
+            marker_787cbb6332ac4aef9e8ef69b8382f25a.bindPopup(popup_bf747952ef994847b716913bd6334fb5);
+
+            
+        
+    
+
+            var marker_877d4269fc7b435c83f8614387b7c227 = L.marker(
+                [47.677683,-116.780466],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_707633cd14474debb06817534fd23904 = L.popup({maxWidth: '300'});
+
+            
+                var html_9da0194e97cb4a14adb14105aa1f3c2f = $('<div id="html_9da0194e97cb4a14adb14105aa1f3c2f" style="width: 100.0%; height: 100.0%;">2012 - Coeur d&#39;Alene, ID - Jerry King</div>')[0];
+                popup_707633cd14474debb06817534fd23904.setContent(html_9da0194e97cb4a14adb14105aa1f3c2f);
+            
+
+            marker_877d4269fc7b435c83f8614387b7c227.bindPopup(popup_707633cd14474debb06817534fd23904);
+
+            
+        
+    
+
+            var marker_1dcf009622554fa387c5be3f0491fcdb = L.marker(
+                [37.096528,-113.568416],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_15746c908e12404aae5f6735f9333038 = L.popup({maxWidth: '300'});
+
+            
+                var html_5c2c2b89321d4ad9a7e8451edf1ff94d = $('<div id="html_5c2c2b89321d4ad9a7e8451edf1ff94d" style="width: 100.0%; height: 100.0%;">2011 - St. George, UT - Reggie Sherrill</div>')[0];
+                popup_15746c908e12404aae5f6735f9333038.setContent(html_5c2c2b89321d4ad9a7e8451edf1ff94d);
+            
+
+            marker_1dcf009622554fa387c5be3f0491fcdb.bindPopup(popup_15746c908e12404aae5f6735f9333038);
+
+            
+        
+    
+
+            var marker_476304a678fb4ae78d2f6ad8fb48cc33 = L.marker(
+                [38.291859,-122.458036],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_379eadc5dc374db7a4140c414f263606 = L.popup({maxWidth: '300'});
+
+            
+                var html_a31fee679b7349449b80d77b78eeb4f4 = $('<div id="html_a31fee679b7349449b80d77b78eeb4f4" style="width: 100.0%; height: 100.0%;">2010 - Northern California - Alex King</div>')[0];
+                popup_379eadc5dc374db7a4140c414f263606.setContent(html_a31fee679b7349449b80d77b78eeb4f4);
+            
+
+            marker_476304a678fb4ae78d2f6ad8fb48cc33.bindPopup(popup_379eadc5dc374db7a4140c414f263606);
+
+            
+        
+    
+
+            var marker_13675cfb0cdb4095bc19f9fe3706e273 = L.marker(
+                [39.237685,-120.02658],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_7fa1d3ec12204c43987ee7c45f97388f = L.popup({maxWidth: '300'});
+
+            
+                var html_bbdcda091b6c43a2b6d14fba31a47e53 = $('<div id="html_bbdcda091b6c43a2b6d14fba31a47e53" style="width: 100.0%; height: 100.0%;">2009 - Lake Tahoe, CA - Alex King</div>')[0];
+                popup_7fa1d3ec12204c43987ee7c45f97388f.setContent(html_bbdcda091b6c43a2b6d14fba31a47e53);
+            
+
+            marker_13675cfb0cdb4095bc19f9fe3706e273.bindPopup(popup_7fa1d3ec12204c43987ee7c45f97388f);
+
+            
+        
+    
+
+            var marker_5fc36d1a43eb492c8385f1b5355ef3c5 = L.marker(
+                [47.606209,-122.332071],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_4f52b5606a7a4b349701ba51036065d1 = L.popup({maxWidth: '300'});
+
+            
+                var html_9ef4747e8915460a9e9c1d3a7ba4d7bb = $('<div id="html_9ef4747e8915460a9e9c1d3a7ba4d7bb" style="width: 100.0%; height: 100.0%;">2008 - Seattle, WA - Alex King</div>')[0];
+                popup_4f52b5606a7a4b349701ba51036065d1.setContent(html_9ef4747e8915460a9e9c1d3a7ba4d7bb);
+            
+
+            marker_5fc36d1a43eb492c8385f1b5355ef3c5.bindPopup(popup_4f52b5606a7a4b349701ba51036065d1);
+
+            
+        
+    
+
+            var marker_47e7baa1dadd45bda7fcedffac774c2a = L.marker(
+                [35.960638,-83.920739],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_69853d056d76449b90008fe4dcb15986 = L.popup({maxWidth: '300'});
+
+            
+                var html_85394a1ffd7f4e7fa6ae10c32f9c3155 = $('<div id="html_85394a1ffd7f4e7fa6ae10c32f9c3155" style="width: 100.0%; height: 100.0%;">2007 - Tennessee - Stuart King</div>')[0];
+                popup_69853d056d76449b90008fe4dcb15986.setContent(html_85394a1ffd7f4e7fa6ae10c32f9c3155);
+            
+
+            marker_47e7baa1dadd45bda7fcedffac774c2a.bindPopup(popup_69853d056d76449b90008fe4dcb15986);
+
+            
+        
+    
+
+            var marker_b967edee05964ad2b4f37040909337dd = L.marker(
+                [33.520661,-86.80249],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_e08fef2cf62040d5827f754dc4ec9ca6 = L.popup({maxWidth: '300'});
+
+            
+                var html_bccb6d73568b477a90c9faa046f6c835 = $('<div id="html_bccb6d73568b477a90c9faa046f6c835" style="width: 100.0%; height: 100.0%;">2006 - Alabama - Gary Olson</div>')[0];
+                popup_e08fef2cf62040d5827f754dc4ec9ca6.setContent(html_bccb6d73568b477a90c9faa046f6c835);
+            
+
+            marker_b967edee05964ad2b4f37040909337dd.bindPopup(popup_e08fef2cf62040d5827f754dc4ec9ca6);
+
+            
+        
+    
+
+            var marker_e4303eed40b04ecd983f980be3e89c82 = L.marker(
+                [32.366805,-86.299969],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_8533b691d1ff48e887e54967df2b1f9f);
+            
+    
+            var popup_79d8b639801b43f7a218c6fabc647c43 = L.popup({maxWidth: '300'});
+
+            
+                var html_a7de88ac8000400fa027851738f4905f = $('<div id="html_a7de88ac8000400fa027851738f4905f" style="width: 100.0%; height: 100.0%;">2005 - Alabama - Stuart King</div>')[0];
+                popup_79d8b639801b43f7a218c6fabc647c43.setContent(html_a7de88ac8000400fa027851738f4905f);
+            
+
+            marker_e4303eed40b04ecd983f980be3e89c82.bindPopup(popup_79d8b639801b43f7a218c6fabc647c43);
+
+            
+        
+</script>
