@@ -185,10 +185,10 @@ def teams():
             msg = 'Teams not properly defined. Please try again.'
             return render_template('teams.html', players=players, msg=msg)
 
-        flat = p1 + p2
-        if len([x for x, count in Counter(flat).items() if count > 1]) >= 1:
-            msg = 'The same golfer was selected twice. Please try again.'
-            return render_template('teams.html', players=players, msg=msg)
+        # flat = p1 + p2
+        # if len([x for x, count in Counter(flat).items() if count > 1]) >= 1:
+        #     msg = 'The same golfer was selected twice. Please try again.'
+        #     return render_template('teams.html', players=players, msg=msg)
 
         golfers = list(zip(p1,p2))
         teams_df = golf.calc_teams(golfers, course)

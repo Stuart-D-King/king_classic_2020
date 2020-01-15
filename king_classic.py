@@ -207,7 +207,10 @@ class PlayGolf(object):
                 names.append(doc['name'])
                 players.append(pickle.loads(doc['player']))
 
-        pot = len(names) * 5
+        if course in ["Lake Jovita - North", "Lake Jovita - South"]:
+            pot = (len(names)-1) * 5
+        else:
+            pot = len(names) * 5
         cols = [str(x) for x in range(1, 19)]
 
         scores = []

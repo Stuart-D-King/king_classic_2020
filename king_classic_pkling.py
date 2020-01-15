@@ -251,7 +251,10 @@ class PlayGolf(object):
         players = [golfer for golfer in golfers if golfer.skins == True]
         names = [golfer.name for golfer in golfers]
 
-        pot = len(names) * 5
+        if course in ["Lake Jovita - North", "Lake Jovita - South"]:
+            pot = (len(names)-1) * 5
+        else:
+            pot = len(names) * 5
         cols = [str(x) for x in range(1, 19)]
 
         scores = []
@@ -425,7 +428,7 @@ class PlayGolf(object):
         dct = dict(zip(names, golfers))
 
         golfer = dct[player]
-        if course == 'World Woods - Rolling Oaks':
+        if course == 'World Woods - Rolling Oaks' and player != 'Andy Tapper':
             check_a = []
             check_b = []
             for c in ['Lake Jovita - North', 'Lake Jovita - South']:
@@ -443,7 +446,7 @@ class PlayGolf(object):
             else:
                 return golfer.hdcp
 
-        elif course == 'World Woods - Pine Barrens':
+        elif course == 'World Woods - Pine Barrens' and player != 'Andy Tapper':
             check1_a = []
             check1_b = []
             for c in ['Lake Jovita - North', 'Lake Jovita - South']:
@@ -482,7 +485,7 @@ class PlayGolf(object):
             check1_a = []
             check1_b = []
             for c in ['Lake Jovita - North', 'Lake Jovita - South']:
-                if all(golfer.show_scorecard(c).values()):
+                if player != 'Andy Tapper' and all(golfer.show_scorecard(c).values()):
                     c_par, _ = self.courses[c]
                     check1_a.append((sum(c_par) + golfer.hdcp) - golfer.calc_course_score(c) >= 4)
                     check1_b.append(golfer.calc_course_score(c) - (sum(c_par) + golfer.hdcp) >= 8)
@@ -500,7 +503,7 @@ class PlayGolf(object):
             check2_b = []
             for c in ['Lake Jovita - South', 'World Woods - Rolling Oaks']:
                 # pdb.set_trace()
-                if all(golfer.show_scorecard(c).values()):
+                if player != 'Andy Tapper' and all(golfer.show_scorecard(c).values()):
                     c_par, _ = self.courses[c]
                     check2_a.append((sum(c_par) + hdcp1) - golfer.calc_course_score(c) >= 4)
                     check2_b.append(golfer.calc_course_score(c) - (sum(c_par) + hdcp1) >= 8)
@@ -535,7 +538,7 @@ class PlayGolf(object):
             check1_a = []
             check1_b = []
             for c in ['Lake Jovita - North', 'Lake Jovita - South']:
-                if all(golfer.show_scorecard(c).values()):
+                if player != 'Andy Tapper' and all(golfer.show_scorecard(c).values()):
                     c_par, _ = self.courses[c]
                     check1_a.append((sum(c_par) + golfer.hdcp) - golfer.calc_course_score(c) >= 4)
                     check1_b.append(golfer.calc_course_score(c) - (sum(c_par) + golfer.hdcp) >= 8)
@@ -552,7 +555,7 @@ class PlayGolf(object):
             check2_a = []
             check2_b = []
             for c in ['Lake Jovita - South', 'World Woods - Rolling Oaks']:
-                if all(golfer.show_scorecard(c).values()):
+                if player != 'Andy Tapper' and all(golfer.show_scorecard(c).values()):
                     c_par, _ = self.courses[c]
                     check2_a.append((sum(c_par) + hdcp1) - golfer.calc_course_score(c) >= 4)
                     check2_b.append(golfer.calc_course_score(c) - (sum(c_par) + hdcp1) >= 8)
