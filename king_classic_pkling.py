@@ -588,7 +588,7 @@ class PlayGolf(object):
 
             check4_a = []
             check4_b = []
-            for c in ['World Woods - Pine Barren', 'Southern Hills Plantation - Morning']:
+            for c in ['World Woods - Pine Barrens', 'Southern Hills Plantation - Morning']:
                 if all(golfer.show_scorecard(c).values()):
                     c_par, _ = self.courses[c]
                     check4_a.append((sum(c_par) + hdcp3) - golfer.calc_course_score(c) >= 4)
